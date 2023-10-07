@@ -1,0 +1,74 @@
+/* --------------- Slider Form ---------------- */
+#quest { max-width: 400px;
+    .slick-form { margin:0px; max-width: 100%; }
+    .input { display: flex !important; width: 100%; }
+    .forms {
+        input, textarea, select {
+            flex:1; 
+            height: 50px; 
+            padding: 10px;
+            font-size: 16px; 
+            border: none; 
+            background-color:white;
+            margin: 0px; 
+            color:$text; 
+            &:focus { background-color: rgba(#000, .5); color:white; }
+        }
+        textarea { padding-top: 15px; }
+        .next { 
+            min-width: 100px; 
+            flex:0 1 auto;
+            position: relative; 
+            margin: 0; 
+            font:400 16px/1 $font; 
+            border-radius: 0px; 
+            transform: none; 
+            background-color: $primary; 
+            color:white; 
+            padding:0px; 
+            height: auto; 
+        }    
+    }
+    .slick-dots { text-align: left; }
+    ::placeholder { color:$text; }
+    ::-webkit-input-placeholder { color:$text; }
+}
+
+/* -------------- Social Links ------------- */
+.social { text-align: center; margin:0; display: flex; justify-content: space-around;
+    a { position: relative; display: inline-block; margin: 5px; font-size: 16px; color: #fff; width: 40px; height: 40px; border-radius: 50%;line-height: 40px;  }
+    .fb{background-color: $facebook;}
+    .gp{background-color: $google;}
+    .yp{background-color: $yelp;}
+    .yt{background-color: $youtube;}
+    .in{background-color: $instagram;}
+    .tw {background-color: $twitter;}
+    a:hover {background-color: #fff;}
+    .fb:hover i{color: $facebook;}
+    .gp:hover i{color: $google;}
+    .yp:hover i{color: $yelp}
+    .yt:hover i{color: $youtube;}
+    .in:hover i{color: $instagram;}
+    .tw:hover i{color: $twitter;}
+}
+
+/* ------------- Footer ------------- */
+footer { background-color: #16191a; color: #fff; padding: 100px 0 0;
+    a { color: #fff; 
+        &:hover { color:$secondary; } 
+    }
+    .fo-title { color: $primary; display: block; margin-bottom: 10px; text-align: left;  }
+    #fo-contents { display: flex; justify-content: space-around; margin-bottom: 100px; padding:10px; }
+    .pho { font-size: 22px; display: block; }
+    .phy { font-size: 18px; display: block }
+    
+    .hours { margin:0; }
+    .hours p { color: #fff; margin: 0; }
+
+    .social { display: table; 
+        a:first-of-type { margin-left: 0; } 
+    }
+}
+#copy { text-align: center; background-color: $secondary;
+    .icon-tnt { display: inline-block; vertical-align: middle; margin: 0 20px 10px -12px; font-size: 70px; }
+}

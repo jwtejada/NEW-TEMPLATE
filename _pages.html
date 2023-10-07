@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="_ui.css" rel="stylesheet">
+	<link href="styles.css" type="text/css" rel="stylesheet">
+</head>
+<body>            
+    <!-- Office Tour -->
+    <h2 class="center">Tour/ Community Gallery </h2>
+    <div id="tour" class="gallery">
+        <div class="slick-controls"></div>
+        <div class="slick-gallery">
+            <div>
+                <img src="https://www.fillmurray.com/850/650" />
+                <figcaption><p>Lorem ipsum dolor sit amet consectetur.</p></figcaption>
+            </div>
+            <div>
+                <img src="https://www.fillmurray.com/850/650" />
+                <figcaption><p>Lorem ipsum dolor sit amet consectetur.</p></figcaption>
+            </div>
+            <div>
+                <img src="https://www.fillmurray.com/850/650" />
+                <figcaption><p>Lorem ipsum dolor sit amet consectetur.</p></figcaption>
+            </div>
+        </div>
+    </div>   
+
+    <!-- <h2 class="center" >Smile Gallery</h2>
+    <div id="smiles" class="gallery">
+        <div class="pagingInfo"></div>
+        <div class="slick-controls"></div>
+        <div class="slick-gallery">
+            <figure>
+                <div class="case">
+                    <span><img src="https://www.fillmurray.com/640/360" alt=""></span>
+                    <span><img src="https://www.fillmurray.com/640/360" alt=""></span>
+                </div>
+                <figcaption><p>Lorem ipsum dolor sit amet consectetur.</p></figcaption>
+            </figure> 
+            <figure>
+                <div class="case">
+                    <span><img src="https://www.fillmurray.com/640/360" alt=""></span>
+                    <span><img src="https://www.fillmurray.com/640/360" alt=""></span>
+                </div>
+                <figcaption><p>Lorem ipsum dolor sit amet consectetur.</p></figcaption>
+            </figure> 
+        </div>
+    </div> 
+    -->
+
+    <h2 class="center" >FAQs</h2>
+    <div class="accordion">
+        <h2>
+            How often should I be seeing a dentist?</h2>
+        <p>
+            Our team (along with the American Dental Association) recommends that patients of all ages should plan to attend at least two dental checkups and cleanings each year. These preventive appointments give our dentists the chance to catch and treat problems during their earliest stages, plus they go a long way in preventing the development of many issues in the first place!</p>
+        <h2>
+            When should I schedule my child&rsquo;s first dental visit?</h2>
+        <p>
+            We encourage parents to schedule their child&rsquo;s first dental visit as early as six months of age and no later than their first birthday. This visit will consist of the dentist checking their gums and mouth, and it will help set the tone that the dental office is a safe and supportive environment your child doesn&rsquo;t have to fear. We actually have a certified pediatric dentist on-staff just for taking care of little smiles, Dr. Alex Okoye!</p>
+        <h2>
+            Can you help with a dental emergency?</h2>
+        <p>
+            Yes! If you or a loved one are experiencing a lot of dental pain due to a broken/knocked out tooth or severe toothache, you can always call our office to get the immediate care you need. We&rsquo;re often able to make same-day appointments for emergency patients, so don&rsquo;t hesitate to come see us when you need dental care right NOW.</p>
+        <h2>
+            Do I have to get metal braces to straighten my teeth?</h2>
+        <p>
+            Not anymore! For adult and teen patients with misaligned teeth, we&rsquo;re now able to offer them Invisalign, an orthodontic treatment that completely does away with the traditional bracket and wire system. Instead, it uses a series of clear plastic aligner trays to shift the teeth while completely preserving the natural appearance of the smile. Better yet, the trays are 100% removable as well for easy eating and tooth brushing. To see if this treatment would be a good fit for you, contact us today.</p>
+    </div>  
+     
+    <!-- Appointment Form -->
+    <form class="styled-form" method="post" action="">
+        <div class="drei">
+            <span class="input-content">
+                <input class="input__field" name="Name" type="text" required="true"/>
+                <label class="input__label"><span class="input__label-content">Full Name </span></label>
+            </span>
+
+            <span class="input-content">
+                <input class="input__field phone-input" name="Phone" type="text" pattern="(.){10,}"  required title="10 characters minimum" required="true"/>
+                <label class="input__label"><span class="input__label-content">Phone Number </span></label>
+            </span>
+
+            <span class="input-content">
+                <input class="input__field" name="Email" type="email" required="true"/>
+                <label class="input__label"><span class="input__label-content">Email Address</span></label>
+            </span>
+        </div>
+        <div class="drei">
+            <div class="inline options">
+                <label>Are you...</label>
+                <span><input name="PatientType[]" type="radio" value="New" required="required" /> A New Patient </span>
+                <span><input name="PatientType[]" type="radio" value="Existing" required="required" /> An Existing Patient </span>
+            </div>
+            <div class="inline options day">
+                <label>Preferred day of the week</label>
+                <span><input name="day[]" type="checkbox" value="Monday" /> Monday </span>
+                <span><input name="day[]" type="checkbox" value="Tuesday"  /> Tuesday </span>
+                <span><input name="day[]" type="checkbox" value="Wednesday" /> Wednesday </span>
+                <span><input name="day[]" type="checkbox" value="Thursday" /> Thursday </span>
+                <span><input name="day[]" type="checkbox" value="Friday" /> Friday </span>
+            </div>
+            <div class="inline options comm">
+                <label>Preferred method of communication</label>
+                <span><input name="communication[]" type="checkbox" value="phone" /> Phone </span>
+                <span><input name="communication[]" type="checkbox" value="Text" /> Text </span>
+                <span><input name="communication[]" type="checkbox" value="email" /> Email </span>
+            </div>
+        </div>
+        <div class="drei">
+            <div class="inline options">
+                <label>How did you hear about us?</label>
+                <span><input name="hear[]" type="checkbox" value="Search Engine" /> Search Engine </span>
+                <span><input name="hear[]" type="checkbox" value="Family/Friend" /> Family/Friend </span>
+                <span><input name="hear[]" type="checkbox" value="Promotion" /> Promotion </span>
+                <span><input name="hear[]" type="checkbox" value="Social Media" /> Social Media </span>
+                <span><input name="hear[]" type="checkbox" value="Other" /> Other </span>
+            </div>
+            <div class="inline">
+                <label>What are you interested in?</label>
+                <textarea name="Interests" aria-label="Interests" placeholder="I am interested in…"  required="true"></textarea>
+            </div>
+            <div class="inline">
+                <label>Questions or comments?</label>
+                <textarea name="Questions/Comments" aria-label="Questions" placeholder="Type your questions or comments here."></textarea>
+            </div>
+        </div>        
+        <input type="hidden" name="token_generate" id="token_generate">
+        <input type="submit" name="submit" value="Submit Request" class="btn">
+        <input name="_subject" type="hidden" value="Request Appointment" />
+        <input name="_redirect" type="hidden" value="thanks.html" />
+    </form> 
+
+    <!-- REFERRAL FORM -->
+    <div id="refer">
+        <form action="" class="simple" method="post">
+            <input name="name" placeholder="Your Name*" required="true" type="text" />
+            <input name="email" placeholder="Your Email*" required="true" type="email" />
+            <input name="phone" placeholder="Your Phone" type="tel" />
+            <input name="name" placeholder="Patient’s Name*" required="true" type="text" />
+            <input name="email" placeholder="Patient’s Email*" required="true" type="email" />
+            <input name="phone" placeholder="Patient’s Phone*" required="true" type="tel" />
+            <textarea name="reason" placeholder="Reason for Referral*" required="true"></textarea>
+            <textarea name="treatments" placeholder="Description of Previous Treatments*" required="true"></textarea>
+            <select name="patient">
+                <option value="" disabled selected hidden>Are you a...</option>
+                <option value="New Patient">New Patient</option>
+                <option value="Existing Patient">Exisiting Patient</option>
+            </select>
+            <select name="patient">
+                <option value="" disabled selected hidden>How Did You Hear About Us?</option>
+                <option value="Search Engine">Search Engine</option>
+                <option value="Family/Friend">Family/Friend</option>
+                <option value="Promotion">Promotion</option>
+                <option value="Social Media">Social Media</option>
+                <option value="">Other</option>
+            </select>
+            <button class="btn-wh">Send Me Helpful Answers</button>
+            <input type="hidden" name="token_generate" id="token_generate">
+            <input type="submit" name="submit" value="Submit" class="btn">
+            <input name="_subject" type="hidden" value="Refer a Patient" />
+            <input name="_redirect" type="hidden" value="thanks.html" />
+        </form>
+    </div>
+
+    <!-- Simple Form -->
+    <h2>Simple Form</h2>
+    <form class="simple" method="post" action="">
+        <input type="text" name="name" required="true" placeholder="Enter your name">
+        <input type="tel" name="phone" required="true" placeholder="Enter your phone number">
+        <input type="email" name="email" required="true" placeholder="Enter your email address">
+        <select name="patient">
+            <option value="" disabled selected hidden>Are you a...</option>
+            <option value="New Patient">New Patient</option>
+            <option value="Existing Patient">Exisiting Patient</option>
+            </select>
+        <select name="patient">
+            <option value="" disabled selected hidden>How Did You Hear About Us?</option>
+            <option value="Search Engine">Search Engine</option>
+            <option value="Family/Friend">Family/Friend</option>
+            <option value="Promotion">Promotion</option>
+            <option value="Social Media">Social Media</option>
+            <option value="">Other</option>
+        </select>
+        <textarea name="message" placeholder="Enter your questions/comments"></textarea>
+        <input type="hidden" name="token_generate" id="token_generate">
+        <input type="submit" name="submit" value="Submit" class="btn">
+        <input type="hidden" name="_subject" value="Ask Us a Question.">
+        <input type="hidden" name="_redirect" value="thanks.html">
+    </form>
+
+    <!-- Emergency Common Icons -->
+    <h2>COMMON GRID</h2>
+    <div id="common">
+        <a href="#common-1" rel="leanModal">                            
+            <span><img src="assets/images/common-1.png"/></span>
+            <h3>
+                Toothaches</h3>                
+        </a>
+        <div>
+            <span><img src="assets/images/common-2.png"/></span>
+            <h3>
+                Chipped<br /> Tooth</h3>
+        </div>
+        <div>      
+            <span><img src="assets/images/common-3.png"/></span>  
+            <h3>
+                Cracked<br /> Tooth</h3>
+        </div>
+        <div>
+            <span><img src="assets/images/common-4.png"/></span>
+            <h3>
+                Sensitivity to<br /> Hot &amp; Cold</h3>
+        </div>
+        <div>
+            <span><img src="assets/images/common-5.png"/></span>
+            <h3>
+                Knocked-Out<br /> Tooth</h3>
+        </div>
+        <div>
+            <span><img src="assets/images/common-6.png"/></span>
+            <h3>
+                Lost Filling<br /> or Crown</h3>
+        </div>
+        <div>
+            <span><img src="assets/images/common-7.png"/></span>
+            <h3>
+                Broken<br /> Denture</h3>
+        </div>
+        <div>
+            <span><img src="assets/images/common-8.png"/></span>
+            <h3>
+                Loose<br /> Tooth</h3>
+        </div>
+        <div>
+            <span><img src="assets/images/common-9.png"/></span>
+            <h3>
+                Gums, Lip or<br/> Tongue Injury</h3>
+        </div>
+        <div>   
+            <span><img src="assets/images/common-10.png"/></span>
+            <h3>
+                Jaw Pain or<br /> Clenching</h3>
+        </div>
+        <div>
+            <span><img src="assets/images/common-11.png"/></span>
+            <h3>
+                Something Stuck<br /> Between Teeth</h3>
+        </div>
+    </div>
+
+    <!-- Doctors Landing -->
+    <h2>Dr. Landing Page</h2>
+    <div class="landing">
+        <a href="">
+            <img src="http://placekitten.com/350/400" alt="">
+            <span class="btn">Dr. Name 1</span>
+        </a>
+        <a href="">
+            <img src="http://placedog.net/350/400" alt="">
+            <span class="btn">Dr. Name 2</span>
+        </a>
+        <a href="">
+            <img src="https://www.placecage.com/350/400" alt="">
+            <span class="btn">Dr. Name 3</span>
+        </a>
+    </div> 
+
+     <!-- Insurance Checker -->
+     <div id="insure-form">
+        <article id="check-list">
+            <div>
+                <h3>Dental Insurance Checker</h3>
+                <p>Quickly discover if we accept your dental insurance.</p>
+            </div>
+            <select id="insureList" name="insurances" class="searchable-select"></select>
+            <button id="submit" class="btn" value="Check Insurance">Check Insurance</button>
+        </article>
+        <article id="in" class="insure-modal">
+        <button class="close-ins" aria-label="close popup"></button>
+        <div class="yep"><i class="icon-ok-1"></i></div>
+        <div class="h3">Success! <br>
+        We're a preferred provider <br>
+        with your dental insurance!</div>
+        <p>Your checkup and cleaning will be covered! Request an appointment to have a friendly member of our team get back to you with more information.</p>
+        <a href="request-an-appointment.html" class="btn now">Request Appointment</a>
+        </article>
+
+        <article id="out" class="insure-modal">
+        <button class="close-ins" aria-label="close popup"></button>
+        <div class="h3">We take your dental insurance!</div>
+        <p>While we are not a preferred provider with your insurance, there is a 90% chance your checkup and cleaning will be covered! Request an appointment to have a friendly member of our team get back to you with more information.</p>
+        <a href="request-an-appointment.html" class="btn now">Request Appointment</a>
+        </article>     
+    </div>   <!-- end of insurance checker -->
+
+<!-- end of pages sample codes -->  
+</body>
+</html>
