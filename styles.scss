@@ -17,7 +17,7 @@ h3, .h3 { color: $text; display: block; position: relative; font: 400 30px/1.1 $
 h4, .h4 { color: $text; display: block; position: relative; font: 700 20px/1.1 $font; text-transform: uppercase; }
 
 main ul { list-style: none;  padding: 0; margin: 10px 0; text-align: left; overflow: hidden;
-    li { position: relative; display: block; margin: 0 0 10px 26px; padding-left: 24px; line-height: 1.6; overflow: hidden; }
+    li { position: relative; display: block; margin: 0 0 10px 26px; padding-left: 34px; line-height: 1.6; }
     li:before {
         content: '\e832'; 
         color: $primary; 

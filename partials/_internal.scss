@@ -15,7 +15,7 @@ main { overflow: hidden }
 /* ------------- Internal Banner Title -------------- */
 #interior-banner {  display: flex; flex-direction: column; justify-content: center; position: relative; text-align: center; background-color: #ddd; padding:40px 0;
     &:before {content: ''; position: absolute; left: 0; right: 0; top: 0; bottom: 0;  background: rgba(0,0,0,0.3);}
-    .contain {max-width: 1150px; margin: auto; width: 100%;  position: relative; z-index: 1;}
+    .contain { max-width: 1150px; margin: auto; width: 100%;  position: relative; z-index: 1; padding:50px 20px; }
 
     .flex-title { height: 100%; margin: 0; width: 100%; justify-content: center; align-items: center;
         .contain { flex:1; max-width: 50%; margin:0; text-align: left; padding: 10px;
@@ -52,10 +52,10 @@ main { overflow: hidden }
 }
 
 /* ------------- Page Divider -------------- */
-.page-divider {display: block; max-width: 100%; width: 100%; position: relative; z-index: 1; }
+.page-divider { display: block; max-width: 100%; width: 100%; position: relative; z-index: 1; }
 .block { position: relative; display: table; clear: both; width: 100%; max-width: 100%; padding: 60px 10px;
     &:before { content: ''; position: absolute; left: -1000px; right: -1000px; top: 0; bottom: 0; z-index: -1; }
-    .contain { display: flex; justify-content: space-around; align-items: flex-start;}
+    .contain { display: flex; justify-content: space-between; align-items: flex-start;}
     h2 { margin-bottom: 20px;}
     .wrap { height: 0;}
     article { margin: auto 0; flex: 0 1 550px; }
@@ -88,7 +88,7 @@ main { overflow: hidden }
 }
 
 /* ------------- Services -------------- */
-.services-grid { position: relative; margin: 40px auto; display: flex; align-items: stretch; flex-wrap: wrap; flex-wrap: wrap;
+.services-grid { position: relative; margin: 40px auto; display: flex; align-items: stretch; flex-wrap: wrap; 
     > div {flex: 0 1 32%;  margin: 10px auto;}
     h3 {display: block; text-align: center; line-height: 1.1; 
         a { color: $text; }
@@ -102,15 +102,16 @@ main { overflow: hidden }
 }
 
 /* ------------- Landing -------------- */
-// .landing { display: flex; align-items: flex-start; justify-content: space-around; flex-wrap: wrap; margin: 40px auto;
-//     a { flex: 0 1 30%; margin: 10px auto 20px; text-align: center; display: table; max-width: 350px;
-//      img { transition:.3s; }
-//      &:hover img { filter: grayscale(1) }
-//     }
-// }
+.landing { display: flex; align-items: flex-start; justify-content: center; flex-wrap: wrap; margin: 40px auto; gap:20px;
+    a { flex: 0 1 30%; margin: 10px; text-align: center; display: block; max-width: 350px;
+     img { transition:.3s; }
+     &:hover img { filter: grayscale(1) }
+    }
+}
 
 /* ------------- Forms Overwrites -------------- */
-.styled-form .inline, .styled-form .input-content { background-color: $primary; }
+.styled-form { text-align: center; }
+.styled-form .inline, .styled-form .input-content { background-color: $primary; text-align: left; }
 .styled-form .input__field:focus+.input__label::before,.input--filled .input__label::before{ border-color:$secondary; }
 
 // #refer { background: $secondary; margin: 40px auto; max-width: 700px; padding: 40px 20px 30px;}
@@ -118,39 +119,59 @@ main { overflow: hidden }
 // #refer {input, textarea, select  { font-size:18px; padding:10px; display: block; width: 100%; margin-bottom: 10px; } }
 
 /* ------------- FAQ -------------- */
-.accordion {margin: 40px auto; text-align: left; max-width: 1100px; border-bottom: 1px solid rgba(0,0,0,0.2);
-    .toggle {position: relative; cursor: pointer; clear: both;  padding: 20px 50px 20px 0px; border-top: 1px solid rgba(0,0,0,0.2);
+.accordion {margin: 40px auto; text-align: left; max-width: 1100px;
+    .toggle {position: relative; cursor: pointer; clear: both;  padding: 20px 50px 20px 0px; 
         width: 100%; display: block; text-align: left;
         &:hover {
             h2, h3,  .h2, .h3 {color: $secondary}
         }
-        &.active:after  {content: '\e83a'; }
     }
-    .toggle:after{content: '\e825'; font-family: "fontello"; position: absolute; top: 13px; right: 0; font-size: 24px;width: 50px; text-align: center;width: 43px; height: 43px; color: $text; border: 1px solid $text; background-color: #fff; border-radius: 50%; display: flex;align-items: center; justify-content: center;}
-    > div {display:none; padding:0 50px 20px 0;
-        p:first-of-type {margin-top: 0;}
+    .toggle:after{ 
+        content: '\e825'; 
+        font-family: "fontello"; 
+        position: absolute; 
+        top: 13px; 
+        right: 0; 
+        font-size: 24px;
+        width: 50px; 
+        text-align: center;
+        width: 43px; 
+        height: 43px; 
+        color: $text; 
+        border: 1px solid $text; 
+        background-color: #fff; 
+        border-radius: 50%; 
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+    }
+    .faq { border-top: 1px solid rgba(0,0,0,0.2); }
+    .faq.active .toggle:after  { content: '\e83a'; }
+    .faq > div { display:none; padding:0 50px 20px 0;
+        p:first-of-type { margin-top: 0; }
     }
 }
 
 /* ------------- Contact -------------- */
 .hours { display: table; margin: 10px auto; text-align: left!important; 
-    label { width:120px; display: inline-block; font-weight: 700;}
+    label { width:120px; display: inline-block; font-weight: 700; }
 }
 
-.contact { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; max-width: 100%; margin: 30px auto;
+.contact { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; max-width:1150px; margin: 30px auto;
     h3 { margin: 10px auto; }
     p { margin: 15px 0 10px; line-height: 1.4; }
-    > div:first-child {flex: 1 0 auto; margin-right: 20px;}
-    > div:last-child {margin-right: 10px;}
+    > div:first-child { flex: 1 0 auto; margin-right: 20px; }
+    > div:last-child { margin-right: 10px; }
 }
-.contact-map { height: 380px; margin: 20px auto 40px;  iframe {height: 100%; width: 100%;}}
 
 /* ------------- Controls -------------- */
 .slick-slider {
     .slick-arrow { position: absolute; left:0; top:50%; transform: translateY(-50%); }
     #next { left:auto; right:0; }
 }
-.slick-controls { display: flex; align-items: center; justify-content: space-around; }
+.slick-controls { display: flex; align-items: center; justify-content:center; gap:10px; 
+    #next { order:2; }
+}
 .slick-arrow {
     color: $primary; 
     font-family: fontello; 

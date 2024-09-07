@@ -3,7 +3,7 @@
     .slick-form { margin:0px; max-width: 100%; }
     .input { display: flex !important; width: 100%; }
     .forms {
-        input, textarea, select {
+        input:not([type="submit"]), textarea, select {
             flex:1; 
             height: 50px; 
             padding: 10px;
@@ -63,12 +63,9 @@ footer { background-color: #16191a; color: #fff; padding: 100px 0 0;
     .phy { font-size: 18px; display: block }
     
     .hours { margin:0; }
-    .hours p { color: #fff; margin: 0; }
-
-    .social { display: table; 
-        a:first-of-type { margin-left: 0; } 
-    }
+    .social { justify-content: center; display: flex; gap:10px; }
 }
 #copy { text-align: center; background-color: $secondary;
-    .icon-tnt { display: inline-block; vertical-align: middle; margin: 0 20px 10px -12px; font-size: 70px; }
+    > div { display: inline-block; }
+    .icon-tnt { display: inline-block; vertical-align: middle; margin: 0 20px 10px -12px; font-size: 55px; }
 }

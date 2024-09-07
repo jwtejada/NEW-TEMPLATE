@@ -175,8 +175,8 @@ $(function () {
     // Why Section
     $( ".why ul li" ).wrapInner( "<span></span>");
 
-     ////////////////////////////// FAQ / Accordion
-     $(".accordion > h3, .accordion > h2").each(function () {
+    ////////////////////////////// FAQ / Accordion
+    $(".accordion > h3, .accordion > h2").each(function () {
         $(this).wrap('<button></button>').parent().addClass('toggle');
     });
     $(".toggle").each(function () {

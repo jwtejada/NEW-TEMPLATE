@@ -1,28 +1,21 @@
 
 header { position: fixed; z-index: 100; left: 0; top: 0; width: 100%; background-color: #fff; transition: .3s all;
     &:focus-within { z-index:500 }
-    .logo { position: relative; z-index: 1; }
+    .logo { position: relative; z-index: 1; 
+		img { max-height: 80px; }
+	}
 	.hd-container { flex:1; display: flex; }
 	.hd-info { display: flex; align-items: center; justify-content: flex-end; flex: 1; }
 
     .pho { color: $primary; font-size:22px; } 
     .phy { color:$text; font-size: 16px; }
-    .pho, .phy { margin: 0 auto; padding-left: 25px;  display: table; margin: 0; display: block; position: relative;
+    .pho, .phy {  margin: 0; display: block; position: relative;
 		&:hover  { color: $secondary;}
-		i { color: $tertiary; font-size: 15px; position: absolute; left: 0; top: 50%; transform: translateY(-50%); }
 	}
 	.hd-btns { display: flex; flex-wrap: wrap; flex: 0 1 280px; justify-content: space-between;
 		[class^="btn"] { 
-			justify-content: center; 
-			align-items: center;  
-			min-width: auto;  
-			padding: 12px 6px;  
-			border-radius: 0; 
 			margin: 0; 
-			&:hover {background-color: $secondary !important;}
 		}
-		.ra { flex: 1 1 100%; margin-bottom: 5px; }
-		.fm, .of { flex: 0 1 49%; padding: 5px; }
 	}
 }
 
@@ -58,7 +51,6 @@ header { position: fixed; z-index: 100; left: 0; top: 0; width: 100%; background
 // Scrolled nav
 .fix-nav {
     header { position: fixed!important;  box-shadow: 0 3px 7px rgba(24, 23, 24, 0.35); animation-duration:1s; animation-fill-mode: both; z-index: 100; background-color: #f0efee; }
-    .fm, .of { display: none; } 
 }
 
 // mobile nav

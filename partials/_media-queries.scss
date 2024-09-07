@@ -2,63 +2,49 @@
 /*! 1024 */
 @media (max-width:1024px) {
     .split {
-        .flex-ed { flex-flow: column; text-align: center;}
-        figure {order:2; margin:0 auto;}
-        article {margin: 20px auto; padding:40px 10px;}
-        .btn {margin: 10px auto;}
+        .flex-ed { flex-flow: column; text-align: center; }
+        figure { order:2; margin:0 auto; }
+        article { margin: 0 auto; padding:10px; }
+        .btn { margin: 10px auto; }
     }
-    #fo-contents { flex-wrap: wrap; text-align: center; }
-    footer .hours { margin: 20px auto; }
-    .fo-title { text-align: center; }
-
     #interior-banner { 
-        .contain { padding: 30px 20px 20px;}
-        .flex-title {text-align: center;
-            .contain {max-width: 100%; }
+        .contain { padding: 40px 20px 20px;}
+        .flex-title { text-align: center;
+            .contain { max-width: 100%; }
         }
     }
     .flex-title { display: block; text-align: center;
-        #page-title {text-align: center;}
+        #page-title { text-align: center; }
     }
-    #main-img {min-height: auto; margin: 10px auto 20px; img {display: block; }}
+    #main-img { min-height: auto; margin: 10px auto 20px; img {display: block; }}
     #intro { margin: 20px auto; text-align: center; }
     .block { text-align: center; padding: 40px 10px;
-        .contain {display: block;}
-        .btn {margin: 10px auto;}
+        .contain { display: block; }
+        .btn { margin: 10px auto; }
         h2, h3 { margin-bottom: 20px; text-align: center;}
         [class^="elem"] { float: none; margin: 10px auto 20px;  max-width: 100%; }
-        ul {display: table; margin: 20px auto;}
+        ul { display: table; margin: 20px auto; }
     }
-    .services-grid > div, #all {flex: 0 1 48%; }
-    [data-player][class^="elem"]{max-width: 650px;}
-    .styled-form .btn { display: table; margin:10px auto; }
 }
 
 /*! 768 */
 @media (max-width:768px) {
-    header .pho {font-size: 18px;}
+    .hd-info {display: none;}   
     .why ul {flex-wrap: wrap;}
     .why ul li {flex: 1 1 100%;}
     .contact {text-align: center; display: block;}
     .contact > div:first-child, .contact p {margin: 10px auto;}
+    #map {display: none;}
 }
 
 /*! 590 */
 @media (max-width:590px) {
-    .hd-info {display: none;}   
-    #map {display: none;}
-    #copy span:last-of-type {display: block;  font-size: 0px;}
-    .gallery {padding: 0;}
-    .services-grid >div, #all {flex: 1 1 100%;}
-    .youtube[class*="elem-"] { width: 100%; }
-    [data-player][class^="elem"] {min-width: 100%;}
-    .landing {display: block;}    
     header .hours label {width: 100px;}
 }
 
 /*! 400 */
 @media (max-width:400px) {    
-    .more-to-explore [class^="btn"] {min-width: 100%; width: 100%; margin: 8px auto;}
+    .more-to-explore [class^="btn"] { min-width: 100%; width: 100%; margin: 8px auto; }
     [data-embed] .close { font-size: 12px;min-width: 120px; padding: 4px; }
     #copy .icon-tnt { font-size:50px; margin-bottom: 8px; }
 }   
