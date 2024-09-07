@@ -17,7 +17,16 @@ $(function () {
     });
 
     $("nav a[href^='https']").attr({target:"_blank", rel:"noopener noreferrer" });
-    $("a[name]").parent().addClass('has_target');
+    /// Revised anchors for page divider 2.0 - 2024 @ Jose
+    $("p:has(a[name]) + h2").prev().addClass("has_anchor");
+    $("p:has(a[name]) + h3").prev().addClass("h3_anchor");
+    $(".has_anchor").each(function() {
+        $(this).next().addBack().wrapAll('<div class="dividerLead" />');
+    })
+    $(".h3_anchor").each(function() {
+        $(this).next().addBack().wrapAll('<div class="miniLead" />');
+    })
+    /// end anchor setup.
     $("#page h1, h2#append").appendTo("#page-title");
     $("#page .page-divider").parent("#page").addClass('has_divider');
     $(".internal .more-to-explore").appendTo(".internal");
@@ -201,8 +210,8 @@ $(function () {
           }
     });
 
-    ////////////////////////////// page divider
-    var dividerStart = "> h2, .page-divider .wrap",
+    ////////////////////////////// page divider v2.0 - 2024@Jose
+    var dividerStart = "> h2, .dividerLead, .page-divider .wrap",
         mobileWidth = 1025;
     $.when(setupServices()).done(function () {});
         function setupServices() {
@@ -213,58 +222,55 @@ $(function () {
                     .addBack()
                     .wrapAll('<div class="block">');
         });
+        ///////////// move anchors to top of blocks
         $(".block").each(function (index) {
             $(this)
                 .find('.dividerLead')
                 .next(".elem")
                 .addClass('wow fadeIn')
-                .addClass(index % 2 ? 'elem-left' : 'elem-right')
+                .addClass(index % 2 ? 'elem-right' : 'elem-left')
             // move .elem above H2
             if ($(window).width() >= mobileWidth) {
                 $(this).children(".elem").insertBefore($(this).children(".dividerLead"));
             }
         })
-        ///////////// move anchors to top of blocks
-        $(".page-divider .block a[name]:first-of-type").each(function () {
-            var getAnchor = $(this).parent(".has_target"),
-            anchorTarget = $(this).parentsUntil(".page-divider").next().find(".dividerLead").parent();
-            getAnchor.remove();
-            $(this).prependTo(anchorTarget);
-        });
+        
     }
     $(".block [class^='btn']").parent("p").addClass('has_btn');
     /////////  mini-blocks for h3 inside divider blocks
-    $('.block').each(function() {
-        if (!$(this).find('.accordion').length) { 
-            $(".block > h3").each(function() {
-                $(this).nextUntil('h3, .dividerLead').addBack().wrapAll('<div>')
-                .parent().addClass("mini-block")
-            });
-        }
-    });
+    var miniStart = "> h3, .miniLead";
+    if (!$(this).find('.accordion').length) { 
+        $(".block " + miniStart)
+        .addClass("miniLead").each(function () { //auto wrap
+            $(this)
+                .nextUntil('.miniLead')
+                .addBack()
+                .wrapAll('<div class="mini-block">');
+        });
+    }
     $(".mini-block").each(function (index) {
         if ($(this).closest('.block').find('.elem.elem-right').length) {
             $(this)
-            .find('h3')
+            .find('.miniLead')
             .next(".elem-sm")
             .addClass(index % 2 ? 'elem-right' : 'elem-left')
         } else if ($(this).closest('.block').find('.elem.elem-left').length) {
             $(this)
-            .find('h3')
+            .find('.miniLead')
             .next(".elem-sm")
             .addClass(index % 2 ? 'elem-left' : 'elem-right')
         } else {
             $(this)
-            .find('h3')
+            .find('.miniLead')
             .next(".elem-sm")
             .addClass('elem-left')
         }
         if ($(window).width() >= mobileWidth) {
-            $(this).children(".elem-sm").insertBefore($(this).children("h3"));
+            $(this).children(".elem-sm").insertBefore($(this).children(".miniLead"));
         }
     })
     ///////////// wraps text & .btn in article after .block .elem
-    $(".block .elem + *, .block .wrap, .mini-block h3").each(function () { //auto wrap
+    $(".block .elem + *, .block .wrap, .mini-block .miniLead").each(function () { //auto wrap
         $(this).nextUntil('.block, .mini-block').addBack().wrapAll('<article>');
     });
 
@@ -281,6 +287,7 @@ $(function () {
     $(".block.no_img .dividerLead").each(function () { //auto wrap
         $(this).nextUntil('.block').addBack().wrapAll('<article>');
     });
+    /// end revised divider
 
     //MORE TOGGLE
     $(".block").each(function() {
