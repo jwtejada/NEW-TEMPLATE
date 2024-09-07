@@ -175,19 +175,23 @@ $(function () {
     // Why Section
     $( ".why ul li" ).wrapInner( "<span></span>");
 
-    ////////////////////////////// FAQ / Accordion
-    $(".accordion > h3, .accordion > h2").each(function () {
+     ////////////////////////////// FAQ / Accordion
+     $(".accordion > h3, .accordion > h2").each(function () {
         $(this).wrap('<button></button>').parent().addClass('toggle');
     });
     $(".toggle").each(function () {
-        $(this).nextUntil('.toggle').add().wrapAll('<div>');
+        $(this).nextUntil('.toggle')
+            .add()
+            .wrapAll('<div>');
+        $(this).nextUntil('.toggle').addBack() //wrap all
+            .wrapAll("<div class='faq' />");
     });
     $(".toggle").on("click", function () {
-        if ($(this).hasClass("active")) {
-            $(this).removeClass("active").next().slideUp();
+        if ($(this).parent().hasClass("active")) {
+            $(this).parent().removeClass("active").find("div").slideUp();
         } else {
-            $(".toggle").removeClass("active").next().slideUp();
-            $(this).addClass("active").next().slideDown();
+            $(".toggle").parent().removeClass("active").find("div").slideUp();
+            $(this).parent().addClass("active").find("div").slideDown();
         }
         for (var i = 0; i < $('.accordion iframe').length; i++) {
             var video = $('.accordion iframe').attr("src");
