@@ -109,7 +109,7 @@ star:before {content: '\e80f \e80f \e80f \e80f \e80f'; color: #f4bd17;}
 .modal-content[data-player] img {width: 100%;}
 .modal-content[data-player] {padding: 0;}
 .modal-content[data-player] .modal-close svg * {stroke: #fff; stroke-width: 2;}
-.modal-close { position: absolute; right:0; top:0px; z-index:102; cursor:pointer; width: 40px; height: 40px; display: flex; align-items: center;justify-content: center; text-align: center; font-size: 40px; line-height: 1; }
+.modal-close { padding:0; position: absolute; right:0; top:0px; z-index:102; cursor:pointer; width: 40px; height: 40px; display: flex; align-items: center;justify-content: center; text-align: center; font-size: 40px; line-height: 1; }
 .modal-close span {display: none;}
 .modal-close:hover {background-color: #333;}
 .modal-close:hover svg * { stroke: #fff; stroke-width:2;}

@@ -99,7 +99,6 @@ $(function () {
 
     //// Prepends + appends Close button to popups modals - gives keyboard focus easier access to close button.
     $(".modal-content").prepend('<button class="modal-close" aria-label="close popup"><svg xmlns="http://www.w3.org/2000/svg" width="18.385" height="18.385" viewBox="0 0 18.385 18.385"><g id="Group_2628" data-name="Group 2628" transform="translate(-1055.307 -6754.308)"><line id="Line_259" data-name="Line 259" x2="24" transform="translate(1056.015 6771.985) rotate(-45)" fill="none" stroke="#1b322c" stroke-linecap="round" stroke-width="1"/><line id="Line_260" data-name="Line 260" x2="24" transform="translate(1056.015 6755.015) rotate(45)" fill="none" stroke="#1b322c" stroke-linecap="round" stroke-width="1"/></g></svg><span>Close Popup</span></button>');
-    $(".modal-content").append('<button class="modal-close" aria-label="close popup"><svg xmlns="http://www.w3.org/2000/svg" width="18.385" height="18.385" viewBox="0 0 18.385 18.385"><g id="Group_2628" data-name="Group 2628" transform="translate(-1055.307 -6754.308)"><line id="Line_259" data-name="Line 259" x2="24" transform="translate(1056.015 6771.985) rotate(-45)" fill="none" stroke="#1b322c" stroke-linecap="round" stroke-width="1"/><line id="Line_260" data-name="Line 260" x2="24" transform="translate(1056.015 6755.015) rotate(45)" fill="none" stroke="#1b322c" stroke-linecap="round" stroke-width="1"/></g></svg><span>Close Popup</span></button>');
 
     //// Clicking popup moves keyboard focus into modal 
     $("a[rel*=leanModal]").on("click", function(){
@@ -109,19 +108,19 @@ $(function () {
         document.getElementById(trimmed).focus();
     });
 
-     // In Firefox and Safari plays modal popup videos automatically
-    $("#openVid").on("click", function() {
-        $("#bio-modal .youtube:not('.active')").trigger("click");
-    });
+    //  // In Firefox and Safari plays modal popup videos automatically
+    // $("#openVid").on("click", function() {
+    //     $("#bio-modal .youtube:not('.active')").trigger("click");
+    // });
     // Closing popup modal turns off video
-    $(".modal-close").on("click", function(){
-        for (var i = 0; i < $('.modal-content iframe').length; i++) {
-          var video = $('.modal-content iframe').attr("src");
-          var video = video.replace("autoplay=1", "autoplay=0") ;
-          $('.modal-content iframe').attr("src","");
-          $('.modal-content iframe').attr("src",video);
-        }
-    });
+    // $(".modal-close").on("click", function(){
+    //     for (var i = 0; i < $('.modal-content iframe').length; i++) {
+    //       var video = $('.modal-content iframe').attr("src");
+    //       var video = video.replace("autoplay=1", "autoplay=0") ;
+    //       $('.modal-content iframe').attr("src","");
+    //       $('.modal-content iframe').attr("src",video);
+    //     }
+    // });
 
     // var menuItemsBut = document.querySelectorAll('li.has-submenu');
     // Array.prototype.forEach.call(menuItemsBut, function(el, i){

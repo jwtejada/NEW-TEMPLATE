@@ -83,7 +83,9 @@ main { overflow: hidden }
 #common { display: flex; flex-flow: wrap; margin:40px auto 0; max-width: 980px; text-align: center;
     > * { flex:1 0 120px; margin:0 1em 20px; }
     a:hover h3 { color:$secondary; }
-    span { display: flex; min-height:80px; align-items: center; margin-bottom: 10px; }
+    .off { pointer-events: none; }
+    .ic-color {fill: $secondary}
+    .sv-icon, span { justify-content: center; display: flex; min-height:80px; align-items: center; margin-bottom: 10px; }
     h3 { font:700 14px/1.1 $font; letter-spacing: 1.4; text-transform: uppercase; }
 }
 
