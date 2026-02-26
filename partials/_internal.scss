@@ -1,5 +1,5 @@
 /* ------------- Page Foundation -------------- */
-#page {position: relative; display: block; width: 100%; margin: auto; padding: 30px 10px; max-width: 1150px; clear: both;}
+#page {position: relative; display: block; width: 100%; margin: auto; padding: 30px 15px; max-width: 1150px; clear: both;}
 #page.has_divider { padding-bottom: 0; padding-top: 0; }
 .page_index .internal { display: none; }
 .center { text-align: center; }
@@ -66,9 +66,7 @@ main { overflow: hidden }
     .elem-right { order: 1;}
 }
 .block:nth-of-type(odd):before { background-color: #ededed; }
-
-.mini-block { display: table; clear: both; max-width: 100%; width: 100%; margin: 30px auto; }
-
+.mini-block { display: flex; justify-content: center; clear: both; max-width: 100%; width: 100%; margin: 30px auto; }
 .block.no_img { text-align: center; }
 
 /* ------------- Meet Doctor Page -------------- */
@@ -90,8 +88,8 @@ main { overflow: hidden }
 }
 
 /* ------------- Services -------------- */
-.services-grid { position: relative; margin: 40px auto; display: flex; align-items: stretch; flex-wrap: wrap; 
-    > div {flex: 0 1 32%;  margin: 10px auto;}
+.services-grid { position: relative; margin: 40px auto; justify-content: center; gap:20px; display: flex; align-items: stretch; flex-wrap: wrap; 
+    > div {flex: 0 1 32%; width: 100%; max-width: 32%; margin: 10px auto;}
     h3 {display: block; text-align: center; line-height: 1.1; 
         a { color: $text; }
     }
@@ -135,7 +133,6 @@ main { overflow: hidden }
         top: 13px; 
         right: 0; 
         font-size: 24px;
-        width: 50px; 
         text-align: center;
         width: 43px; 
         height: 43px; 
@@ -159,12 +156,13 @@ main { overflow: hidden }
     label { width:120px; display: inline-block; font-weight: 700; }
 }
 
-.contact { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; max-width:1150px; margin: 30px auto;
+.contact { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; max-width:1130px; margin: 30px auto;
     h3 { margin: 10px auto; }
     p { margin: 15px 0 10px; line-height: 1.4; }
     > div:first-child { flex: 1 0 auto; margin-right: 20px; }
     > div:last-child { margin-right: 10px; }
 }
+.contact-map { max-width: 1130px; margin:0 auto; }
 
 /* ------------- Controls -------------- */
 .slick-slider {
@@ -190,7 +188,6 @@ main { overflow: hidden }
     border: 1px solid $primary; 
     z-index: 5; 
     transition: .3s all;
-    i { margin-left: -4px; }
     &:hover { color: $secondary;  } 
 }
 .slick-dots { line-height: 1;

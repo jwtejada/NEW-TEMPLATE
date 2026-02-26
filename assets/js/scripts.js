@@ -298,6 +298,9 @@ $(function () {
     });
     $(".more-toggle").click(function(){ //use button class more-toggle before H3
         $(this).parents(".has-toggle").find(".mini-wrapper").slideToggle();
+        var currentText = $(this).text();
+        var newText = (currentText === 'Read More') ? 'Read Less' : 'Read More';
+        $(this).text(newText);
     });
 
     /////////// If needed to change explore section if page divider ends with odds

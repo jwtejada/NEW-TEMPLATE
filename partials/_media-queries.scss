@@ -3,7 +3,7 @@
 @media (max-width:1024px) {
     .split {
         .flex-ed { flex-flow: column; text-align: center; }
-        figure { order:2; margin:0 auto; }
+        figure { margin:0 auto; }
         article { margin: 0 auto; padding:10px; }
         .btn { margin: 10px auto; }
     }
@@ -16,6 +16,7 @@
     .flex-title { display: block; text-align: center;
         #page-title { text-align: center; }
     }
+    #page { padding: 30px 20px; }
     #main-img { min-height: auto; margin: 10px auto 20px; img {display: block; }}
     #intro { margin: 20px auto; text-align: center; }
     .block { text-align: center; padding: 40px 10px;
@@ -25,6 +26,8 @@
         [class^="elem"] { float: none; margin: 10px auto 20px;  max-width: 100%; }
         ul { display: table; margin: 20px auto; }
     }
+    .contact {text-align: center; display: block;}
+    .contact > div:first-child, .contact p {margin: 10px auto;}
 }
 
 /*! 768 */
@@ -32,8 +35,6 @@
     .hd-info {display: none;}   
     .why ul {flex-wrap: wrap;}
     .why ul li {flex: 1 1 100%;}
-    .contact {text-align: center; display: block;}
-    .contact > div:first-child, .contact p {margin: 10px auto;}
     #map {display: none;}
 }
 

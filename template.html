@@ -1,42 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta content="$var(metaDescription)$" name="Description" />
+	<meta charset="utf-8" />
+	<meta content="$var(metaDescription)$" name="description" />
 	<link href="_ui.css" rel="stylesheet">
 	<link href="styles.css" type="text/css" rel="stylesheet">
 	<title>$var(pageTitle)$</title>
-	<link rel="canonical" href="http://www.$var(siteURL)$/$var(pageURL)$.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<link rel="canonical" href="https://www.$var(siteURL)$/$var(pageURL)$.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=1" />
     <link href="https://tntwebsites.com/tnticons/css/fontello.css" rel="stylesheet">
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon-144.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon-114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon-72.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon-57.png" />
-    <link rel="icon" href="assets/images/favicon.png">
+    <link rel="icon" href="assets/images/favicon.svg">
     <meta name="apple-mobile-web-app-title" content="" />
-    <script async src='https://tag.simpli.fi/sifitag/d0839950-0d38-0137-dfb5-06a9ed4ca31b'></script>
-
-    <!-- CAPTCHA CODE - UNCOMENT AFTER LIVE OR DELETE IF NOT REQUESTED -->
-    <!-- <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
-    <script>
-    grecaptcha.ready(function() {
-        grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
-        // Set the generated token to the #token_generate form input.
-        var response = document.querySelectorAll("[id=token_generate]");
-        for(var e = 0; e < response.length; e++) {
-            var responseItem = response[e];
-            responseItem.value = token;
-        }
-        });
-    });
-    </script>
-    -->
 </head>
 
 <body class="page_$var(pageurl)$ $section(page-type)$">
@@ -94,7 +73,7 @@
     
 <main class="clearfix" role="main" id="main" tabindex="-1">
     <section class="internal clearfix">
-        <div id="interior-banner" class="random">
+        <div id="interior-banner">
             <div class="contain"> 
                 <div id="page-title"></div>
             </div>

@@ -53,7 +53,7 @@
 }
 
 /* ------------- Footer ------------- */
-footer { background-color: #16191a; color: #fff; padding: 100px 0 0;
+footer { background-color: $primary; color: #fff; padding: 100px 0 0;
     a { color: #fff; 
         &:hover { color:$secondary; } 
     }
@@ -66,6 +66,7 @@ footer { background-color: #16191a; color: #fff; padding: 100px 0 0;
     .social { justify-content: center; display: flex; gap:10px; }
 }
 #copy { text-align: center; background-color: $secondary;
+    span:not(#copyDate) { margin:0 1em; }
     > div { display: inline-block; }
     .icon-tnt { display: inline-block; vertical-align: middle; margin: 0 20px 10px -12px; font-size: 55px; }
 }

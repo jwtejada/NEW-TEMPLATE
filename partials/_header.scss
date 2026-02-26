@@ -50,15 +50,14 @@ header { position: fixed; z-index: 100; left: 0; top: 0; width: 100%; background
 }
 // Scrolled nav
 .fix-nav {
-    header { position: fixed!important;  box-shadow: 0 3px 7px rgba(24, 23, 24, 0.35); animation-duration:1s; animation-fill-mode: both; z-index: 100; background-color: #f0efee; }
+    header { position: fixed!important;  box-shadow: 0 3px 7px rgba(24, 23, 24, 0.35); animation-duration:1s; animation-fill-mode: both; z-index: 100; }
 }
 
 // mobile nav
 @media (max-width:1024px) { 
-    .hd-info { display: flex; align-items: center;  margin-right: 10px; justify-content: flex-end; text-align: center;}
     header .pho {font-size: 30px;}
     header .logo {padding: 8px; img {max-height: 70px;}}
-    #hd-top, #main-nav, header nav ul, header .hd-btns, header [class^="btn"], header .phy  { display: none; }
+    .hd-info, #hd-top, #main-nav, header nav ul, header .hd-btns, header [class^="btn"], header .phy  { display: none; }
     .nav-down {box-shadow: 0 3px 7px rgba(24, 23, 24, 0.2); }
     .nav-up {  transform: translateY(-100%); }    
 	body,header,.mean-container .mean-nav{transition:all .3s}

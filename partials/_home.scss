@@ -37,10 +37,7 @@ body.page_index {
     .slick-reviews { max-width: 700px; margin: 0 auto;
         .slick-slide { padding: 0; margin: 0; }
     }  
-    author { display: flex; font-size: 18px; text-align: left; margin: 10px 0; align-items: center; justify-content: center;         
-        i { margin-right: 20px; display: block; }
-    }
-    star { display: block; letter-spacing: 4px; }
+    .author { display: block; }
 }
 // Show 3 Reviews //
 // @media(min-width: 1001px) {

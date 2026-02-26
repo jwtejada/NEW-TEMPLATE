@@ -8,14 +8,14 @@ date_default_timezone_set('America/Los_Angeles');
  
 if(isset($_POST['submit'])) {
    $url = 'https://www.google.com/recaptcha/api/siteverify';
-   $secret = 'SITE_SECRET_HERE';
+   $secret = 'recaptcha_site_secret';
    $response = $_POST['token_generate'];
    $remoteip = $_SERVER['REMOTE_ADDR'];
  
    $request = file_get_contents($url.'?secret='.$secret.'&response='.$response);
    $result = json_decode($request);
  
-   $adderURL = 'ADDER_LINK_HERE';
+   $adderURL = 'https://tnt-adder.herokuapp.com/submit/ca9175f4-cd87-4aaf-9130-de07c68aadd0';
  
    $referrer = $_SERVER['HTTP_REFERER'];
    $userAgent = $_SERVER['HTTP_USER_AGENT'];
