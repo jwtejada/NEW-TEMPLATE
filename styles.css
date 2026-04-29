@@ -139,10 +139,10 @@ main ul li:before {
 
 /*! --- fixed-tabs overwrite --- */
 #fixed-tabs .ra {
-  background-color: #075a99;
+  background-color: rgb(6.8972972973, 89.6648648649, 152.6027027027);
 }
 #fixed-tabs .call {
-  background-color: #079299;
+  background-color: rgb(6.8972972973, 145.7054054054, 152.6027027027);
 }
 #fixed-tabs .map, #fixed-tabs .fr {
   background-color: #545454;
@@ -308,17 +308,17 @@ header .hd-btns [class^=btn] {
     position: relative;
     display: block;
     box-shadow: none;
-    background-color: #067a80;
+    background-color: rgb(5.7945945946, 122.4108108108, 128.2054054054);
   }
   nav ul ul ul ul li a {
     padding-left: 2em;
     padding-left: 2em;
   }
   nav ul ul ul ul li a {
-    background-color: #06848a;
+    background-color: rgb(6.2356756757, 131.7286486486, 137.9643243243);
   }
   nav ul ul ul ul li:hover a {
-    background-color: #15595c;
+    background-color: rgb(20.6707317073, 88.8841463415, 92.3292682927);
   }
   .has-submenu span > a, .has-submenu button {
     display: inline-block;
@@ -345,17 +345,9 @@ header .hd-btns [class^=btn] {
   animation-duration: 1s;
   animation-fill-mode: both;
   z-index: 100;
-  background-color: #f0efee;
 }
 
 @media (max-width: 1024px) {
-  .hd-info {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    justify-content: flex-end;
-    text-align: center;
-  }
   header .pho {
     font-size: 30px;
   }
@@ -365,7 +357,7 @@ header .hd-btns [class^=btn] {
   header .logo img {
     max-height: 70px;
   }
-  #hd-top, #main-nav, header nav ul, header .hd-btns, header [class^=btn], header .phy {
+  .hd-info, #hd-top, #main-nav, header nav ul, header .hd-btns, header [class^=btn], header .phy {
     display: none;
   }
   .nav-down {
@@ -747,7 +739,7 @@ header .hd-btns [class^=btn] {
   margin-bottom: 5px;
 }
 [data-embed] .close:focus, [data-vimeo] .close:focus {
-  background-color: #064b80;
+  background-color: rgb(5.7945945946, 75.3297297297, 128.2054054054);
 }
 
 [data-embed] .close:hover, [data-vimeo] .close:hover {
@@ -818,21 +810,8 @@ body.page_index h2 small, body.page_index .h2 small {
   padding: 0;
   margin: 0;
 }
-#reviews author {
-  display: flex;
-  font-size: 18px;
-  text-align: left;
-  margin: 10px 0;
-  align-items: center;
-  justify-content: center;
-}
-#reviews author i {
-  margin-right: 20px;
+#reviews .author {
   display: block;
-}
-#reviews star {
-  display: block;
-  letter-spacing: 4px;
 }
 
 /* --------------- Slider Form ---------------- */
@@ -947,7 +926,7 @@ body.page_index h2 small, body.page_index .h2 small {
 
 /* ------------- Footer ------------- */
 footer {
-  background-color: #16191a;
+  background-color: #0868b1;
   color: #fff;
   padding: 100px 0 0;
 }
@@ -990,6 +969,9 @@ footer .social {
   text-align: center;
   background-color: #08a9b1;
 }
+#copy span:not(#copyDate) {
+  margin: 0 1em;
+}
 #copy > div {
   display: inline-block;
 }
@@ -1006,7 +988,7 @@ footer .social {
   display: block;
   width: 100%;
   margin: auto;
-  padding: 30px 10px;
+  padding: 30px 15px;
   max-width: 1150px;
   clear: both;
 }
@@ -1216,7 +1198,8 @@ main {
 }
 
 .mini-block {
-  display: table;
+  display: flex;
+  justify-content: center;
   clear: both;
   max-width: 100%;
   width: 100%;
@@ -1264,7 +1247,14 @@ main {
 #common a:hover h3 {
   color: #08a9b1;
 }
-#common span {
+#common .off {
+  pointer-events: none;
+}
+#common .ic-color {
+  fill: #08a9b1;
+}
+#common .sv-icon, #common span {
+  justify-content: center;
   display: flex;
   min-height: 80px;
   align-items: center;
@@ -1280,12 +1270,16 @@ main {
 .services-grid {
   position: relative;
   margin: 40px auto;
+  justify-content: center;
+  gap: 20px;
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
 }
 .services-grid > div {
   flex: 0 1 32%;
+  width: 100%;
+  max-width: 32%;
   margin: 10px auto;
 }
 .services-grid h3 {
@@ -1382,7 +1376,6 @@ main {
   top: 13px;
   right: 0;
   font-size: 24px;
-  width: 50px;
   text-align: center;
   width: 43px;
   height: 43px;
@@ -1425,7 +1418,7 @@ main {
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  max-width: 1150px;
+  max-width: 1130px;
   margin: 30px auto;
 }
 .contact h3 {
@@ -1441,6 +1434,11 @@ main {
 }
 .contact > div:last-child {
   margin-right: 10px;
+}
+
+.contact-map {
+  max-width: 1130px;
+  margin: 0 auto;
 }
 
 /* ------------- Controls -------------- */
@@ -1481,9 +1479,6 @@ main {
   border: 1px solid #0868b1;
   z-index: 5;
   transition: 0.3s all;
-}
-.slick-arrow i {
-  margin-left: -4px;
 }
 .slick-arrow:hover {
   color: #08a9b1;
@@ -1581,7 +1576,6 @@ main {
     text-align: center;
   }
   .split figure {
-    order: 2;
     margin: 0 auto;
   }
   .split article {
@@ -1606,6 +1600,9 @@ main {
   }
   .flex-title #page-title {
     text-align: center;
+  }
+  #page {
+    padding: 30px 20px;
   }
   #main-img {
     min-height: auto;
@@ -1641,6 +1638,13 @@ main {
     display: table;
     margin: 20px auto;
   }
+  .contact {
+    text-align: center;
+    display: block;
+  }
+  .contact > div:first-child, .contact p {
+    margin: 10px auto;
+  }
 }
 /*! 768 */
 @media (max-width: 768px) {
@@ -1652,13 +1656,6 @@ main {
   }
   .why ul li {
     flex: 1 1 100%;
-  }
-  .contact {
-    text-align: center;
-    display: block;
-  }
-  .contact > div:first-child, .contact p {
-    margin: 10px auto;
   }
   #map {
     display: none;
